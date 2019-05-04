@@ -1,0 +1,17 @@
+div.card-body {
+  max-width: '540px'; }
+  div.card-body .menu-properties {
+    background: black !important;
+    border-radius: 4px;
+    min-width: 52px;
+    min-height: 212px; }
+  div.card-body .nav-link {
+    padding: 16px 0px 16px 0px; }
+  div.card-body i.store {
+    color: white; }
+  div.card-body i.house {
+    color: white; }
+  div.card-body i.build {
+    color: white; }
+  div.card-body i.hotel {
+    color: white; }
