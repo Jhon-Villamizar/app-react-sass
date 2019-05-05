@@ -1,2 +1,17 @@
 form.form {
   text-align: left; }
+
+div.card-titles {
+  width: 18rem;
+  padding-right: 0px;
+  padding-left: 0px; }
+  div.card-titles div.titles {
+    position: relative;
+    top: 49px; }
+  div.card-titles .list-group .list-group-item {
+    border: none;
+    padding: 9px 0 9px 0; }
+
+select {
+  background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #FFF);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
