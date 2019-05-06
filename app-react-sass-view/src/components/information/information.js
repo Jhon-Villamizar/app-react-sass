@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import './information.css';
 
 class Information extends Component {
   constructor() {

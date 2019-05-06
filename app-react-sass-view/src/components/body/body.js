@@ -1,6 +1,5 @@
 import React from 'react';
 import Information from '../information/information';
-//import './body.css';
 
 const Body = () => (
   <div className="container">
