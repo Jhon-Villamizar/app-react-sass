@@ -1,6 +1,6 @@
 import React from 'react';
 import Information from '../information/information';
-import './body.css';
+//import './body.css';
 
 const Body = () => (
   <div className="container">
@@ -21,9 +21,15 @@ const Body = () => (
                 <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                   <Information></Information>
                 </div>
-                <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">profile</div>
-                <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">messages</div>
-                <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">settings</div>
+                <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                  <Information></Information>
+                </div>
+                <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                  <Information></Information>
+                </div>
+                <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                  <Information></Information>
+                </div>
               </div>
             </div>
           </div>

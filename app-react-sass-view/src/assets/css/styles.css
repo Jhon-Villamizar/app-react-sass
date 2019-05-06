@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+div.card-body {
+  max-width: "540px";
+}
+div.card-body .menu-properties {
+  background: black !important;
+  border-radius: 4px;
+  min-width: 52px;
+  min-height: 212px;
+}
+div.card-body .nav-link {
+  padding: 16px 0px 16px 0px;
+}
+div.card-body i.store {
+  color: white;
+}
+div.card-body i.house {
+  color: white;
+}
+div.card-body i.build {
+  color: white;
+}
+div.card-body i.hotel {
+  color: white;
+}
+
+form.form {
+  text-align: left;
+}
+
+div.card-titles {
+  width: 18rem;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+div.card-titles div.titles {
+  position: relative;
+  top: 49px;
+}
+div.card-titles .list-group .list-group-item {
+  border: none;
+  padding: 9px 0 9px 0;
+}
+
+select {
+  background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #FFF);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: transparent;
+}
+.nav-pills .nav-link.active:after, .nav-pills .show > .nav-link:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 8px 8px;
+  border-color: transparent transparent transparent #007bff;
+  position: absolute;
+  left: 15px;
+  z-index: 1;
+  margin-top: 3px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/*# sourceMappingURL=styles.css.map */

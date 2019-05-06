@@ -1,32 +1,38 @@
 import React, { Component } from 'react';
-import './information.css';
+//import './information.css';
 
 class Information extends Component {
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
-      _id:        null,
-      property:   null,
-      type:       null,
-      reference:  null,
-      areamt2:    null,
-      pricemt2:   null,
-      totalprice: null,
+      base: [],
+      balcon: []
     }
   }
 
   componentDidMount() {
-    const url = 'http://localhost:3001/api/spaces';
+    const urlbase = 'http://localhost:3001/api/base';
+    const urlbalcon = 'http://localhost:3001/api/balcon';
 
-    fetch(url).then(function (response) {
+    fetch(urlbase).then(function (response) {
       return response.json();
-    }).then((function (myJson) {
-      this.setState(myJson[0]);
+    }).then((function (base) {
+      this.setState({ base });
+      console.log('==>', this.state);
+
+    }).bind(this));
+
+    fetch(urlbalcon).then(function (response) {
+      return response.json();
+    }).then((function (balcon) {
+      this.setState({ balcon });
+      console.log('==>', this.state);
+
     }).bind(this));
   }
 
-  render () {
+  render() {
     return (
       <div className="row">
         <div className="col-5">
@@ -67,23 +73,45 @@ class Information extends Component {
         <div className="col-2 card-titles">
           <div className="card">
             <div className="card-header">Base</div>
-            <ul className="list-group list-group-flush">
-              <li className="list-group-item">Referencia</li>
-              <li className="list-group-item">Area mt2</li>
-              <li className="list-group-item">Valor mt2</li>
-              <li className="list-group-item">Valor Total</li>
-            </ul>
+            {
+              this.state.base.length ? (
+                <ul className="list-group list-group-flush">
+                  {
+                    this.state.base.map(base => (
+                      <React.Fragment key={base._id}>
+
+                        <li className="list-group-item">{base.reference}</li>
+                        <li className="list-group-item">{base.areamt2}</li>
+                        <li className="list-group-item">{base.pricemt2}</li>
+                        <li className="list-group-item">{base.totalprice}</li>
+                      </React.Fragment>
+                    ))
+                  }
+                </ul>
+              ) : null
+            }
           </div>
         </div>
         <div className="col-2 card-titles">
           <div className="card">
             <div className="card-header">Balcon</div>
-            <ul className="list-group list-group-flush">
-              <li className="list-group-item">Referencia</li>
-              <li className="list-group-item">Area mt2</li>
-              <li className="list-group-item">Valor mt2</li>
-              <li className="list-group-item">Valor Total</li>
-            </ul>
+            {
+              this.state.balcon.length ? (
+                <ul className="list-group list-group-flush">
+                  {
+                    this.state.balcon.map(balcon => (
+                      <React.Fragment key={balcon._id}>
+                        <li className="list-group-item">{balcon.reference}</li>
+                        <li className="list-group-item">{balcon.areamt2}</li>
+                        <li className="list-group-item">{balcon.pricemt2}</li>
+                        <li className="list-group-item">{balcon.totalprice}</li>
+                      </React.Fragment>
+                    ))
+                  }
+                </ul>
+              ): null
+            }
+
           </div>
         </div>
       </div>

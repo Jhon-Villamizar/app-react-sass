@@ -66,3 +66,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+#### `sass --watch scss/styles.scss:assets/css/styles.css` Create CSS File
+
+This comand transform SCSS file to CSS in the route assigned assets/css//styles.css
