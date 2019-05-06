@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import './information.css';
 
 class Information extends Component {
@@ -19,11 +19,10 @@ class Information extends Component {
   componentDidMount() {
     const url = 'http://localhost:3001/api/spaces';
 
-    fetch(url).then((function (response) {
+    fetch(url).then(function (response) {
       return response.json();
-    }).bind(this)).then((function (myJson) {
+    }).then((function (myJson) {
       this.setState(myJson[0]);
-      console.log("state: ", this.state);
     }).bind(this));
   }
 
