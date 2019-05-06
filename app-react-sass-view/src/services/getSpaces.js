@@ -1,14 +1,12 @@
-const Get = function getSpaces() {
-    var url = 'http://localhost:3001/api/spaces';
+const getSpaces = () => {
+  var url = 'http://localhost:3001/api/spaces';
 
-    fetch(url)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (myJson) {
-            console.log(myJson);
-        });
+  fetch(url).then(function (response) {
+    return response.json();
+  }).then(function (myJson) {
+    console.log("myJson: ", myJson);
+    return myJson;
+  });
 }
 
-
-export default Get;
+export default getSpaces;

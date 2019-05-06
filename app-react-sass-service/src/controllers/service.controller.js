@@ -2,6 +2,8 @@ const Space = require('../models/space');
 const serviceCtrl = {};
 
 serviceCtrl.getSpaces = async (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     const spaces = await Space.find(); 
     res.json(spaces);
 }

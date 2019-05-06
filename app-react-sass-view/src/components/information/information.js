@@ -1,23 +1,26 @@
 import React from 'react';
-import './information.css';
 import Get from '../../services/getSpaces'
+import './information.css';
 
-function Information() {
+const spaces = Get();
+console.log("spaces: ", spaces);
+
+const Information = () => {
     return (
         <div className="row">
             <div className="col-5">
                 <form className="form">
                     <div className="form-group">
-                        <label for="exampleInputEmail1">Seleccionar el tipo</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Base</option>
+                        <label htmlFor="exampleInputEmail1">Seleccionar el tipo</label>
+                        <select id="inputState" className="form-control">
+                            <option defaultValue>Base</option>
                             <option>Balcon</option>
                         </select>
                     </div>
                     <div className="form-group">
-                        <label for="exampleInputPassword1">Seleccionar Referencia</label>
-                        <select id="inputState" class="form-control">
-                            <option selected value="1">1</option>
+                        <label htmlFor="exampleInputPassword1">Seleccionar Referencia</label>
+                        <select id="inputState" className="form-control">
+                            <option defaultValue value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
